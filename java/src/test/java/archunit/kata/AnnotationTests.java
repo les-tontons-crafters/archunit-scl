@@ -1,16 +1,15 @@
 package archunit.kata;
 
 import archunit.kata.examples.annotations.ExcludeFromCoverage;
+import com.tngtech.archunit.core.importer.ImportOption;
 import com.tngtech.archunit.junit.AnalyzeClasses;
 import com.tngtech.archunit.junit.ArchTest;
 import com.tngtech.archunit.lang.ArchRule;
 import org.springframework.stereotype.Repository;
 
-import static archunit.kata.Packages.EXAMPLES;
-import static com.tngtech.archunit.core.importer.ImportOption.DoNotIncludeTests;
 import static com.tngtech.archunit.lang.syntax.ArchRuleDefinition.classes;
 
-@AnalyzeClasses(packages = EXAMPLES, importOptions = DoNotIncludeTests.class)
+@AnalyzeClasses(importOptions = ImportOption.DoNotIncludeTests.class)
 public class AnnotationTests {
     @ArchTest
     public static final ArchRule coverage_attributes_should_not_be_used = classes()

@@ -1,4 +1,4 @@
-package rules;
+package archunit.kata;
 
 import com.tngtech.archunit.junit.AnalyzeClasses;
 import com.tngtech.archunit.junit.ArchTest;

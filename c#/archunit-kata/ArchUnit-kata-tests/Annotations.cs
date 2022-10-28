@@ -1,5 +1,6 @@
 using System.Diagnostics.CodeAnalysis;
 using Xunit;
+using static ArchUnit.Kata.Tests.ArchUnitExtensions;
 using static ArchUnitNET.Fluent.ArchRuleDefinition;
 
 namespace ArchUnit.Kata.Tests;
@@ -8,22 +9,16 @@ public class Annotations
 {
     [Fact]
     public void CoverageAttributesShouldNotBeUsedOnClasses() =>
-        Classes().That().HaveAnyAttributes(typeof(ExcludeFromCodeCoverageAttribute)).Should()
-            .NotExist()
-            .Because("You should use config file instead of ExcludeFromCodeCoverageAttribute")
+        EmptyRule("ExcludeFromCoverage attribute should not be used")
             .Check();
     
     [Fact]
     public void CoverageAttributesShouldNotBeUsedOnMethods() =>
-        MethodMembers().That().HaveAnyAttributes(typeof(ExcludeFromCodeCoverageAttribute)).Should()
-            .NotExist()
-            .Because("You should use config file instead of ExcludeFromCodeCoverageAttribute")
+        EmptyRule("ExcludeFromCoverage attribute should not be used")
             .Check();
     
     [Fact]
     public void CoverageAttributesShouldNotBeUsedOnProperties() =>
-        PropertyMembers().That().HaveAnyAttributes(typeof(ExcludeFromCodeCoverageAttribute)).Should()
-            .NotExist()
-            .Because("You should use config file instead of ExcludeFromCodeCoverageAttribute")
+        EmptyRule("ExcludeFromCoverage attribute should not be used")
             .Check();
 }

@@ -15,6 +15,21 @@ Arthur will facilitate a hands-on session in which we will work in mob (in java 
 - Linguistic Anti-patterns and avoid them
 - and much more (depending on your imagination 😊)
 
+## Exercises
+
+Recommended order (`do at least 1 per category / test class`):
+
+- `LayeredArchitecture`
+- `NamingConvention`
+- `Guidelines`
+- `LinguisticAntiPatterns`
+- `MethodsReturnTypes`
+- `Annotations`
+
+Which other `rules` could be added?
+
+Solution is available in the `solution` folder
+
 ## Resources
 - [ArchUnit](https://www.archunit.org/)
 - [ArchUnit for .Net](https://archunitnet.readthedocs.io/en/latest/)

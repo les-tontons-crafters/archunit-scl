@@ -8,7 +8,6 @@ import static com.tngtech.archunit.core.importer.ImportOption.DoNotIncludeTests;
 import static com.tngtech.archunit.lang.syntax.ArchRuleDefinition.classes;
 import static com.tngtech.archunit.library.dependencies.SlicesRuleDefinition.slices;
 
-// Check documentation here : https://www.archunit.org/userguide/html/000_Index.html
 @AnalyzeClasses(packages = "rules", importOptions = DoNotIncludeTests.class)
 public class ArchitectureTests {
     @ArchTest

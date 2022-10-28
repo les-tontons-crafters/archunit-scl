@@ -347,3 +347,16 @@ CoverageResults/
 # Javascript
 yarn.lock
 **/coverage/
+
+bin/
+out/
+.gradle
+build
+.classpath
+.settings
+.project
+target/
+.DS*
+
+.mvn/*
+*.class

@@ -5,5 +5,9 @@ namespace ArchUnit.Kata.Examples
     public class NonCompliantHandler : ICommandHandler<Order>
     {
         public int Handle(Order command) => 42;
+
+        public void Handle2(Order command)
+        {
+        }
     }
 }

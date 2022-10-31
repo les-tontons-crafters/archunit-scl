@@ -20,4 +20,8 @@ public class ShittyMethods {
     public boolean setSomething() {
         return true;
     }
+
+    public void ShittyMethod() {
+        
+    }
 }

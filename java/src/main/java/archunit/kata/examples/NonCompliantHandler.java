@@ -8,4 +8,8 @@ public class NonCompliantHandler implements CommandHandler<Order> {
     public int handle(Order command) {
         return 42;
     }
+
+    public void handle2(Order command) {
+
+    }
 }

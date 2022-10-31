@@ -4,6 +4,7 @@ using static ArchUnitNET.Fluent.ArchRuleDefinition;
 
 namespace ArchUnit.Kata.Tests
 {
+    //https://www.veneraarnaoudova.com/linguistic-anti-pattern-detector-lapd/las/
     public class LinguisticAntiPatterns
     {
         private static GivenMethodMembersThat Methods() => MethodMembers().That().AreNoConstructors().And();

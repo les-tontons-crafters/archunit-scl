@@ -10,7 +10,7 @@ namespace ArchUnit.Kata.Tests
         public void ServicesShouldBeSuffixedByService() =>
             Classes()
                 .That()
-                .ResideInNamespace("Services").Should()
+                .ResideInNamespace("Services", true).Should()
                 .HaveNameEndingWith("Service")
                 .Check();
 

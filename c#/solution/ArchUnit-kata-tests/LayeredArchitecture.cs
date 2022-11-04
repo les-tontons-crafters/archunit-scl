@@ -8,22 +8,22 @@ namespace ArchUnit.Kata.Tests
     {
         private static GivenTypesConjunctionWithDescription PresentationLayer() =>
             TypesInAssembly().And()
-                .ResideInNamespace("Controllers")
+                .ResideInNamespace("Controllers", true)
                 .As("Presentation Layer");
 
         private static GivenTypesConjunctionWithDescription ApplicationLayer() =>
             TypesInAssembly().And()
-                .ResideInNamespace("Services")
+                .ResideInNamespace("Services", true)
                 .As("Application Layer");
 
         private static GivenTypesConjunctionWithDescription DataAccessLayer() =>
             TypesInAssembly().And()
-                .ResideInNamespace("Repositories")
+                .ResideInNamespace("Repositories", true)
                 .As("Data Access Layer");
 
         private GivenTypesConjunctionWithDescription ModelLayer() =>
             TypesInAssembly().And()
-                .ResideInNamespace("Models")
+                .ResideInNamespace("Models", true)
                 .As("Model Layer");
         
         [Fact]

@@ -21,7 +21,7 @@ namespace ArchUnit.Kata.Tests
             Classes().That()
                 .HaveAnyAttributes(typeof(ApiControllerAttribute))
                 .Should()
-                .ResideInNamespace("Controllers")
+                .ResideInNamespace("Controllers", true)
                 .Check();
 
         [Fact]
@@ -41,10 +41,10 @@ namespace ArchUnit.Kata.Tests
         [Fact]
         public void ClassesInDomainCanOnlyAccessClassesInDomainItself() =>
             Classes().That()
-                .ResideInNamespace("Domain")
+                .ResideInNamespace("Domain", true)
                 .Should()
                 .OnlyDependOnTypesThat()
-                .ResideInNamespace("Domain")
+                .ResideInNamespace("Domain", true)
                 .Check();
     }
 }
